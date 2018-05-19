@@ -1,0 +1,119 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+
+.page-body {
+  width: 100%;
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover
+}
+
+.fabcontainer {
+  position: fixed;
+  bottom: 18%;
+  right: 23%;
+  width: 50px;
+  z-index: 100;
+  /* opacity:0.6; */
+
+  /* bottom: 0;
+  position: fixed;
+  margin: 1em;
+  right: 0px; */
+}
+
+.buttons {
+  background: green;
+  box-shadow: 0px 5px 11px -2px rgba(0, 0, 0, 0.18), 
+              0px 4px 12px -7px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin: 5px auto 0;
+  position: relative;
+  -webkit-transition: all .1s ease-out;
+          transition: all .1s ease-out;  
+}
+
+.buttons:active, 
+.buttons:focus, 
+.buttons:hover {
+  box-shadow: 0 0 4px rgba(0,0,0,.14),
+    0 4px 8px rgba(0,0,0,.28);
+}
+
+.buttons:not(:last-child) {
+  width: 40px;
+  height: 40px;
+  margin: 5px auto 0;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.fabcontainer:hover 
+.buttons:not(:last-child) {
+  opacity: 1;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  margin: 5px auto 0;
+}
+
+/* Unessential styling for sliding up buttons at differnt speeds */
+ 
+.buttons:nth-last-child(1) {
+  -webkit-transition-delay: 25ms;
+          transition-delay: 25ms;
+  /* background-image: url('https://cbwconline.com/IMG/Share.svg'); */
+  background-size: contain;
+}
+
+.buttons:not(:last-child):nth-last-child(2) {
+  -webkit-transition-delay: 50ms;
+          transition-delay: 20ms;
+  /* background-image: url('https://cbwconline.com/IMG/Facebook-Flat.png'); */
+  background-size: contain;
+}
+
+.buttons:not(:last-child):nth-last-child(3) {
+  -webkit-transition-delay: 75ms;
+          transition-delay: 40ms;
+  /* background-image: url('https://cbwconline.com/IMG/Twitter-Flat.png'); */
+  background-size: contain;
+}
+
+.buttons:not(:last-child):nth-last-child(4) {
+  -webkit-transition-delay: 100ms;
+          transition-delay: 60ms;
+  /* background-image: url('https://cbwconline.com/IMG/Google%20Plus.svg'); */
+  background-size: contain;
+} 
+

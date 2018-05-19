@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+  <view class='fabcontainer'>
+    <navigator class="buttons" url="../logs/logs">
+      <image class="img" src="../common/icon/add.png" />
+    </navigator>
+    <navigator class="buttons" url="../logs/logs">
+      <image class="img" src="../common/icon/setting.png" />
+    </navigator>
+    <navigator class="buttons" url="/pages/logs/logs">
+      <image class="img" src="../common/icon/help.png" />
+    </navigator>
+    <image class="buttons" src="../common/icon/function.png" />
+  </view>
+</view>
